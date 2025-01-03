@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "outDir": "dist",
-    "strict": true,
-    "target": "ES6",
-    "module": "ESNext",
-    "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "include": ["server.ts"]
+    "module": "commonjs", 
+    "rootDir": "./",  
+    "outDir": "./dist",
+    "esModuleInterop": true,                             
+    "forceConsistentCasingInFileNames": true,     
+    "strict": true,    
+    "noImplicitAny": true,
+    "strictNullChecks": true,   
+    "strictFunctionTypes": true,  
+    "skipLibCheck": true     
+  }
 }
