@@ -1,11 +1,10 @@
 import React from "react";
 import "./Add.css";
-import {assets} from "../../assets/assets";
+import {assets, url} from "../../assets/assets";
 import axios from "axios";
 import {toast} from "react-toastify";
 
 const Add = () => {
-  const url = "http://localhost:4000";
   const [image, setImage] = React.useState<boolean | File>(false);
   const [data, setData] = React.useState({
     name: "",
