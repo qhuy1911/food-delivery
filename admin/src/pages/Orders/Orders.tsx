@@ -1,7 +1,11 @@
 import React from "react";
 import "./Orders.css";
 
-const Orders = () => {
+type OrdersProps = {
+  url: string;
+};
+
+const Orders = ({url}: OrdersProps) => {
   return <div>Orders</div>;
 };
 

@@ -1,10 +1,14 @@
 import React from "react";
 import "./Add.css";
-import {assets, url} from "../../assets/assets";
+import {assets} from "../../assets/assets";
 import axios from "axios";
 import {toast} from "react-toastify";
 
-const Add = () => {
+type AddProps = {
+  url: string;
+};
+
+const Add = ({url}: AddProps) => {
   const [image, setImage] = React.useState<boolean | File>(false);
   const [data, setData] = React.useState({
     name: "",

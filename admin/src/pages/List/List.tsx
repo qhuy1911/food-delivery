@@ -2,7 +2,6 @@ import React from "react";
 import "./List.css";
 import axios from "axios";
 import {toast} from "react-toastify";
-import {url} from "../../assets/assets";
 
 type Food = {
   _id: string;
@@ -13,7 +12,11 @@ type Food = {
   price: number;
 };
 
-const List = () => {
+type ListProps = {
+  url: string;
+};
+
+const List = ({url}: ListProps) => {
   const [list, setList] = React.useState<Food[]>([]);
 
   const fetchList = async () => {
