@@ -12,13 +12,17 @@ type FoodItemProps = {
 };
 
 const FoodItem = ({id, name, price, description, image}: FoodItemProps) => {
-  const {cartItems, addToCart, removeFromCart} =
+  const {cartItems, addToCart, removeFromCart, url} =
     React.useContext(StoreContext)!;
 
   return (
     <div className="food-item">
       <div className="food-item-img-container">
-        <img className="food-item-image" src={image} alt={`Image item ${id}`} />
+        <img
+          className="food-item-image"
+          src={`${url}/images/${image}`}
+          alt={`Image item ${id}`}
+        />
         {!cartItems[id] ? (
           <img
             className="add"
